@@ -36,6 +36,22 @@ What is a Doctype and why do we need it?
 ```
 ```
 List down ways of improving a website's performance?
+
+Minimize HTTP Requests 
+Use CDN - cached by other websites
+Gzip contents - size reduces by 70% - apache mod_gzip
+expires header - static components infinite year and dynamic appropriate datetime
+styles at top as page loads progessively
+scripts at bottom - as they will block if huge
+No css expressions - calculation in css performance hit
+external css and js - can be cached and html file size reduces
+minified js and css - size reduces
+Reduce DNS lookups. Don't included assets from several domain names as it has to lookup dns for all of them
+configure ETags - Entity Tags - ETag is a string that uniquely identifies a specific version of a component.
+Flush the Buffer Early - php flush() will send the page that's built till then. useful if you send till head so that css gets loaded.
+GET for Ajaxes as GET is single package while POST is 2 step - one headers and other data
+tinypng
+jpegtran
 ```
 ```
 Explain CSS box model 
@@ -148,13 +164,64 @@ Bind vs live
 Css transitions
 ```
 ```
-Css transformations
+Css 2D & 3D Transforms
+
+CSS 2D Transforms
+-----------------
+translate()
+rotate()
+scale()
+skew()
+matrix()
+more on CSS 2D transforms http://www.w3schools.com/css/css3_2dtransforms.asp
+
+Function	            Description
+matrix(n,n,n,n,n,n)	    Defines a 2D transformation, using a matrix of six values
+translate(x,y)	        Defines a 2D translation, moving the element along the X- and the Y-axis
+translateX(n)	        Defines a 2D translation, moving the element along the X-axis
+translateY(n)	        Defines a 2D translation, moving the element along the Y-axis
+scale(x,y)	            Defines a 2D scale transformation, changing the elements width and height
+scaleX(n)	            Defines a 2D scale transformation, changing the element's width
+scaleY(n)	            Defines a 2D scale transformation, changing the element's height
+rotate(angle)	        Defines a 2D rotation, the angle is specified in the parameter
+skew(x-angle,y-angle)	Defines a 2D skew transformation along the X- and the Y-axis
+skewX(angle)	        Defines a 2D skew transformation along the X-axis
+skewY(angle)	        Defines a 2D skew transformation along the Y-axis
+
+
+CSS 3D Transforms
+-----------------
+rotateX()
+div {
+    -webkit-transform: rotateX(120deg); /* Chrome, Safari, Opera */
+    transform: rotateX(120deg);
+}
+
+rotateY()
+div {
+    -webkit-transform: rotateY(130deg); /* Chrome, Safari, Opera */
+    transform: rotateY(130deg);
+}
 ```
 ```
 Css animation vs js animation which is recommended
+
+CSS Animations/Transitions were preferred and spoke about loudly that they support hardware acceleration and mobile friendly experience. However not all animations can be achieved using css transformations. Eg. How can you do a continuous scaling and rotate on hover? This is possible only in JS 
+
+More comprisons on http://css-tricks.com/myth-busting-css-animations-vs-javascript/
 ```
 ```
 Call vs Apply
+
+While the syntax of this function is almost identical to that of call(), the fundamental difference is that call() accepts an argument list, while apply() accepts a single array of arguments.
+
+The apply() method calls a function with a given this value and arguments provided as an array (or an array-like object).
+fun.apply(thisArg, [argsArray])
+
+The call() method calls a function with a given this value and arguments provided individually.
+fun.call(thisArg, arg1, arg2, ...)
+
+
 ```
 ```
 Looping thru array of characters - ways of looping , for, for each, map?
