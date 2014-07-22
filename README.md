@@ -7,7 +7,7 @@ b = a;
 a = null;
 
 what does b have?
-```
+```n
 ```sh
 var x = NaN;
 what is x === NaN?
@@ -60,7 +60,38 @@ Explain CSS box model
 What is Quirks mode?
 ```
 ```
+What's new in HTML5?
+
+DTD declaration made simple
+< !doctype html> 
+
+Introduced new Video and Audio Tags - and made embedding video and audio so easy
+    <audio controls="">
+      <source src="audiofile.mp3" type="audio/mpeg">
+    </audio>
+    <video width="450" height="340" controls="">
+     <source src="videofile.mp4" type="video/mp4">
+    </video>
+
+Canvas element
+Canvas is used to draw graphics using scripting languages like javascript; It's a container for graphics, images etc.
+It's similar to <div>, <a>,<ul> except that contents are rendered through javascript.
+```
+```
 How to make popup close when clicked outside?
+```
+```
+Types of Storage in HTML5
+
+To check if Storage is supported or not, check typeof(Storage) - this should return function
+If Storage is supported, there are 2 types - localStorage and sessionStorage
+    window.localStorage - stores data with no expiration date
+    code.sessionStorage - stores data for one session (data is lost when the tab is closed)
+You can access them by using setItem, getItem and removeItem functions.
+
+The localStorage object stores the data with no expiration date. The data will not be deleted when the browser is closed, and will be available the next day, week, or year.
+
+The sessionStorage object is equal to the localStorage object, except that it stores the data for only one session. The data is deleted when the user closes the browser window.
 ```
 ```
 What are Block and inline elements? 
