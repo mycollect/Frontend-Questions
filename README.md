@@ -7,8 +7,8 @@ b = a;
 a = null;
 
 what does b have?
-```n
-```sh
+```
+```
 var x = NaN;
 what is x === NaN?
 why is it false?
@@ -62,6 +62,8 @@ What is Quirks mode?
 ```
 What's new in HTML5?
 
+https://developer.mozilla.org/en/docs/web/Guide/HTML/HTML5
+
 DTD declaration made simple
 < !doctype html> 
 
@@ -113,6 +115,27 @@ if you wanna search for an element in a page, will Jquery select tag be preferre
 ```
 ```
 What happens when a URL is typed? How will a web page be served? Full cycle?
+http://igoro.com/archive/what-really-happens-when-you-navigate-to-a-url/
+```
+```
+How does a browser show a webpage. What are there in browser
+
+The browser's main components are:
+
+The user interface 
+    this includes the address bar, back/forward button, bookmarking menu etc. Every part of the browser display except the     main window where you see the requested page.
+The browser engine - 
+    the interface for querying and manipulating the rendering engine.
+The rendering engine - 
+    responsible for displaying the requested content. For example if the requested content is HTML, it is responsible for      parsing the HTML and CSS and displaying the parsed content on the screen.
+Networking - 
+    used for network calls, like HTTP requests. It has platform independent interface and underneath implementations for       each platform.
+UI backend - 
+    used for drawing basic widgets like combo boxes and windows. It exposes a generic interface that is not platform           specific. Underneath it uses the operating system user interface methods.
+JavaScript interpreter. 
+    Used to parse and execute the JavaScript code.
+Data storage. 
+    This is a persistence layer. The browser needs to save all sorts of data on the hard disk, for examples, cookies. The      new HTML specification (HTML5) defines 'web database' which is a complete (although light) database in the browser.
 ```
 ```
 Event delegation ul and li event bubbling
