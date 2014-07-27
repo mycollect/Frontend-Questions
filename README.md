@@ -29,6 +29,115 @@ a.abc = “world”;
 what will a.abc return?
 ```
 
+Play with display and float values by having some divs as siblings. See how display:block/inline/inline-block will render the divs. Float:left vs display:inline-block - how do they vary. Try all those with following code.
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+			border: 0px;
+		}
+		#div1{
+			width: 300px;
+			height: 300px;
+			background-color: red;
+			cursor: pointer;
+			/*margin: 100px;
+			padding: 100px;*/
+			display: inline-block;			
+			/*clear: right;*/
+		}
+		#div2{
+			width: 150px;
+			height: 150px;
+			background-color: green;
+			/*position: fixed;
+			bottom: 10px;
+			right: 10px;*/
+			display: inline-block;			
+			/*clear: both;*/
+		}
+		#div3{
+			width: 150px;
+			height: 150px;
+			background-color: blue;
+		}
+		div{
+			
+		}
+	</style>	
+</head>
+<body>
+	<div id="div1">
+		
+	</div>
+	<div id="div2">
+		
+	</div>
+	<div id="div3">
+		
+	</div>
+</body>
+</html>
+```
+
+Play with position values by having some divs as parent-child. See how position:relative/absolute/fixed/static will render the divs. what's the default position value when nothing given - How does the events vary when clicked on child elements when positioned outside etc. Try all those with following code.
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+			border: 0px;
+		}
+		#outer{
+			width: 300px;
+			height: 300px;
+			background-color: red;
+			cursor: pointer;
+			/*margin: 100px;
+			padding: 100px;*/
+		}
+		#inner{
+			width: 150px;
+			height: 150px;
+			background-color: green;
+			/*position: relative;*/
+			bottom: 10px;
+			right: 10px;
+		}
+		div{
+
+		}
+	</style>	
+</head>
+<body>
+	<div id="outer">
+		<div id="inner">
+			
+		</div>
+	</div>
+</body>
+<script>
+		var x = document.getElementById("outer");
+		console.log(x);
+		x.onclick = function(){
+			alert("clicked");
+		}
+	</script>
+</html>
+```
+
+
 Frontend-Developer-Typical-Questions
 =================================
 ```
